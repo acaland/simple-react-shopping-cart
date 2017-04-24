@@ -25,9 +25,9 @@ export default class OrderItem extends Component {
     shouldComponentUpdate(nextProps, nextState) {
         console.log("devo aggiornare il componente?");
         console.log(this.state, nextState);
-        if (nextState.quantita < 0) {
-            return false
-        }
+        //if (nextState.quantita < 0) {
+        //    return false
+        //}
         return true
     }
 
@@ -38,18 +38,27 @@ export default class OrderItem extends Component {
     render() {
         console.log("sto elaborando il JSX e facendo il diff con il virtual DOM")
         return (
-            <div style={{backgroundColor: "red", display: "flex", justifyContent: "flex-start", padding: 10}}>
+            <div style={{
+                backgroundColor: "red",
+                display: "flex",
+                justifyContent: "flex-start",
+                padding: 10
+              }}>  
                 <Thumbnail url={this.props.image}/>
                 <Product name={this.props.product} price={this.props.price}/>
                 <div style={{margin: 20}}>
                     <div>Quantità: {this.state.quantita}</div>
                     <div>
-                        <button onClick={() => this.setState({quantita: this.state.quantita + 1})}>Add</button>
-                        <button onClick={() => this.setState({quantita: this.state.quantita - 1})}>Remove</button>
+                        <button onClick={() =>this.setState({quantita: this.state.quantita + 1})}>
+                          Add
+                        </button>
+                        <button onClick={() => this.state.quantita > 0 ? this.setState({quantita: this.state.quantita - 1}) : null}>
+                          Remove
+                        </button>
                     </div>
                 </div>
             </div>
-            
+
         );
     }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /*export default class Product extends Component {
     render() {
@@ -13,10 +14,14 @@ import React from 'react';
 
 const Product = (props) => (
     <div>
-                <h3>{props.name}</h3>
-                <h4>{props.price} Euro</h4>
-            </div>
+        <h3>{props.name}</h3>
+        <h4>{props.price} Euro</h4>
+    </div>
 );
 
-export default Product;
+Product.propTypes = {
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired
+};
 
+export default Product;
