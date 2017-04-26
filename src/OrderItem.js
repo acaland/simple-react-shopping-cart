@@ -46,7 +46,7 @@ export default class OrderItem extends Component {
             <div style={{
                 //backgroundColor: "red",
                 display: "flex",
-                justifyContent: "flex-start",
+                justifyContent: "space-between",
                 padding: 0,
                 borderStyle: 'solid',
                 borderWidth: 1,
@@ -58,7 +58,7 @@ export default class OrderItem extends Component {
                   <div>
                     Quantità: {this.state.quantita}
                   </div>
-                  <div>
+                  <div style={{ padding: 10 }}>
                     <button onClick={() => {
                         this.setState({quantita: this.state.quantita + 1});
                         this.props.onQuantityChange(this.props.price);
@@ -74,7 +74,7 @@ export default class OrderItem extends Component {
                       Remove
                     </button>
                     <h5>
-                      Subtotale: {subtotale}
+                      Subtotale: {subtotale} Euro
                     </h5>
                   </div>
                 </div>
