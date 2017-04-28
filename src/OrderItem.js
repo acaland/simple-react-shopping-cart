@@ -2,16 +2,15 @@ import React, { Component } from 'react';
 import Thumbnail from './Thumbnail';
 import Product from './Product';
 
-
-
 const styles = {
   wrapper: {
       display: "flex",
       justifyContent: "space-between",
+      alignItems: 'center',
       padding: 0,
       borderStyle: 'solid',
       borderWidth: 1,
-      margin: 5
+      margin: 10
     }
 };
 

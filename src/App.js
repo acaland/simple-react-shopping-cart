@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>My Shopping list</h2>
+          <h2>My Shopping cart</h2>
         </div>
         <div>
           <OrderItem

@@ -23,8 +23,8 @@ import PropTypes from 'prop-types';
 
 const Product = (props) => (
   <div>
-    <h3>{props.name}</h3>
-    <h4>{props.price} Euro</h4>
+    <h2>{props.name}</h2>
+    <h3>{props.price} Euro</h3>
   </div>
 );
 
