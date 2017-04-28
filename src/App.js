@@ -22,8 +22,8 @@ class App extends Component {
         <div>
           <OrderItem
             image="http://www.daddario.com/resources/jdcdad/images/products/da_prod_ej16_main_1.jpg"
-            product="D'Addario set corder acustiche"
-            price={1.20}
+            product="D'Addario Set Corde Acustica"
+            price={3.88}
             onQuantityChange={this.quantitaCambiata.bind(this)}
           />
           <OrderItem
